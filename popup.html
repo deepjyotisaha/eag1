@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gmail Manager</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .email-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .email-item {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 8px;
+      border-radius: 4px;
+    }
+    .email-item:hover {
+      background-color: #f5f5f5;
+    }
+    .checkbox-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .delete-checkbox {
+      color: #d93025;
+    }
+    .delete-checkbox input[type="checkbox"] {
+      accent-color: #d93025;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .process-btn {
+      background-color: #4285f4;
+      color: white;
+    }
+    .refresh-btn {
+      background-color: #34a853;
+      color: white;
+    }
+    .loading {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Gmail Manager</h2>
+    <div id="auth-container">
+      <button id="auth-button" class="process-btn">Sign in with Google</button>
+    </div>
+    <div id="main-container" style="display: none;">
+      <div id="loading" class="loading" style="display: none;">
+        Loading emails...
+      </div>
+      <div id="email-list" class="email-list"></div>
+      <div class="actions">
+        <button id="refresh" class="refresh-btn">Refresh</button>
+        <button id="process" class="process-btn">Process Selected</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

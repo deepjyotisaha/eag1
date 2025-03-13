@@ -36,7 +36,7 @@
     }
   ],
   "oauth2": {
-    "client_id": "108627009849-2ktek0mp3gs099nfmoci1lpclegu55mc.apps.googleusercontent.com",
+    "client_id": "<Insert Client ID>",
     "scopes": [
       "https://www.googleapis.com/auth/gmail.modify",
       "https://www.googleapis.com/auth/gmail.readonly"
